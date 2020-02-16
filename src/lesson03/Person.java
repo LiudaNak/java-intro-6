@@ -44,9 +44,9 @@ public class Person {
         Person p2 = new Person("Ivan", "Ivanov", 15);
                 Person p3 = p1;
 
-        System.out.println("p1 == p2 is %s%n", p1 == p2); //false
-        System.out.println("p1.equals(p2) is %s%n", p1.equals(p2)); //false
-        System.out.println("p1 == p3 is %s%n", p1 == p2); //true
+        System.out.printf("p1 == p2 is %s%n", p1 == p2);
+        System.out.printf("p1 == p3 is %s%n", p1 == p3);
+        System.out.printf("p1.equals(p2) is %s%n", p1.equals(p2));
 
         System.out.println(p1);
     }
