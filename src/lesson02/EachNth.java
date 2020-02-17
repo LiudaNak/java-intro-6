@@ -1,20 +1,23 @@
 package lesson02;
 
-// завдання не зроблене до кінця, не можу зрозуміти, як заповнити масив після циклу for
 public class EachNth {
 
     public static void main(String[] args) {
-EachNth each = new EachNth();
-        System.out.println(each.eachNth(3, "abcdefg"));
+
+        EachNth each = new EachNth();
+        System.out.println(each.eachNth("abcdefg", 3));
     }
-    String eachNth(int n, String... str){
-        for(int i = 0; i < str.length; i++) {  //перебираю всі символи строки по індексу
-            // намагаюсь пропустити ті символи, де індекс не кратний n
-            if (i % n != 0) {
+
+    String eachNth(String str, int n) {
+        char[] chars = str.toCharArray();
+        char[] chats1 = chars.clone();
+        for (int i = 0; i < chars.length; i++) {
+            if (i % n != 0)
                 continue;
-            }
-                str[i] = str[i]; // розумію, що тут має бути щось інше, але не можу збагнути, як масив заповнити новими значеннями :(
-            }
-        return String.valueOf(str);
+            System.out.println(chars[i]);
+            //????????
+        }
+            return String.valueOf(chars);
+
     }
 }
